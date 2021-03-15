@@ -106,12 +106,12 @@ def temperature():
 
 @app.route('/api/v1.0/<start>')
 def start_date(start):
-    sel = [Measurement.date, func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)]
+    select = [Measurement.date, func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)]
 
-    results =  (session.query(*sel)
-                       .filter(func.strftime("%Y-%m-%d", Measurement.date) >= start)
-                       .group_by(Measurement.date)
-                       .all())
+    results =  session.query(*select).\
+               filter(func.strftime("%Y-%m-%d", Measurement.date) >= start).\
+               group_by(Measurement.date).\
+               all()
 
     dates = []                       
     for result in results:
@@ -125,13 +125,13 @@ def start_date(start):
 
 @app.route('/api/v1.0/<start>/<end>')
 def startEnd(start, end):
-    sel = [Measurement.date, func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)]
+    select = [Measurement.date, func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)]
 
-    results =  (session.query(*sel)
-                       .filter(func.strftime("%Y-%m-%d", Measurement.date) >= start)
-                       .filter(func.strftime("%Y-%m-%d", Measurement.date) <= end)
-                       .group_by(Measurement.date)
-                       .all())
+    results =  session.query(*select).\
+               filter(func.strftime("%Y-%m-%d", Measurement.date) >= start).\
+               filter(func.strftime("%Y-%m-%d", Measurement.date) <= end).\
+               group_by(Measurement.date).\
+               all()
 
     dates = []                       
     for result in results:
