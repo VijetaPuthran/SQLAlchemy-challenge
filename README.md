@@ -1,6 +1,7 @@
 # SQLAlchemy Homework - Surfs Up!
 
-![surfs-up.png](Images/surfs-up.png)
+![surfs-up.png](Images/HonoluluHawaii.jpg)
+(Image Source: Google search)
 
 This assignment is on the climate analysis on Honolulu, Hawaii.
 
@@ -30,7 +31,7 @@ The task involved use of Python and SQLAlchemy to do basic climate analysis and 
 
 * The results were plotted using the DataFrame `plot` method.
 
-  ![precipitation](Images/precipitation.png)
+  ![precipitation](Images/PrecipitationAnalysis.png)
 
 * Pandas was used to print the summary statistics for the precipitation data.
 
@@ -56,7 +57,7 @@ The task involved use of Python and SQLAlchemy to do basic climate analysis and 
 
 * The results are plotted in a histogram with `bins=12`.
 
-![station-histogram](Images/station-histogram.png)
+![station-histogram](Images/Tobs.png)
 
 - - -
 
