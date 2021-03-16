@@ -1,7 +1,7 @@
 # SQLAlchemy Homework - Surfs Up!
 
 ![surfs-up.png](Images/HonoluluHawaii.jpg)
-(Image Source: Google search)
+(Image Source: Google search, Bamba Travel)
 
 This assignment is on the climate analysis on Honolulu, Hawaii.
 
